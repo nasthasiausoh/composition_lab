@@ -1,4 +1,4 @@
-package land;
+package vehicles.land;
 
 import products.IProduct;
 import vehicles.Vehicle;

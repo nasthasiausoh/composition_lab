@@ -1,8 +1,7 @@
 import products.Product;
-import land.Bicycle;
-import land.Car;
+import vehicles.land.Bicycle;
+import vehicles.land.Car;
 import vehicles.Engine;
-import vehicles.IMotorised;
 import vehicles.Vehicle;
 import water.Kayak;
 import water.Speedboat;
@@ -37,14 +36,15 @@ public class VehicleStore {
         Kayak kayak = new Kayak(
                 200,
                 20,
-                new Product(300, 4, "Kayak Premium"),
-                "Paddles");
+                new Product(300, 4, "Kayak Premium")
+                );
         vehicles.add(kayak);
+
 
         Speedboat speedboat = new Speedboat(
                 250,
                 70,
-                new Product(790, 13, "Speedy Gonzalez"), "Paddles", newEngine);
+                new Product(790, 13, "Speedy Gonzalez"), newEngine);
         vehicles.add(speedboat);
 
     }

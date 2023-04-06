@@ -7,6 +7,8 @@ public abstract class Vehicle implements IVehicle {  // as soon as we make this 
     private float weight;
     private int maxSpeed;
     private IProduct baseProduct;
+    // just to clarify the jargon: lines 7-9 are instance variables that will become attributes below.
+
 
     public Vehicle(float weight, int maxSpeed, IProduct baseProduct){
         this.weight = weight;
@@ -93,3 +95,7 @@ public abstract class Vehicle implements IVehicle {  // as soon as we make this 
 
 
 }
+// Note:
+// Use inheritance if it is an is - a relationship
+// Interfaces do not necessarily have a 'has-a' relationship but helps us to establish them.
+// Has-a is for composition.

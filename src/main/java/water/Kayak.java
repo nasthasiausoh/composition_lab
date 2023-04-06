@@ -7,9 +7,9 @@ public class Kayak extends Vehicle implements IWaterVehicle  {
 
     private String hullType;
 
-    public Kayak(float weight, int maxSpeed, IProduct baseProduct, String hullType){
+    public Kayak(float weight, int maxSpeed, IProduct baseProduct){
         super(weight, maxSpeed, baseProduct);
-        this.hullType = hullType;
+        this.hullType = "wood";  // setting the hullType to wood, so we do not need to write it in the constructor as it is fixed/hard-coded in.
     }
 
     // getters and setter for hullType

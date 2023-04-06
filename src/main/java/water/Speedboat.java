@@ -7,13 +7,13 @@ import vehicles.Vehicle;
 public class Speedboat extends Vehicle implements IWaterVehicle, IMotorised {
 
     private String hullType;
-    private IMotorised engine;
+    private IMotorised motor;
 
 
-    public Speedboat(float weight, int maxSpeed, IProduct baseProduct, String hullType, IMotorised engine) {
+    public Speedboat(float weight, int maxSpeed, IProduct baseProduct, IMotorised motor) {
         super(weight, maxSpeed, baseProduct);
-        this.hullType = hullType;
-        this.engine = engine;
+        this.hullType = "fiberglass";      // setting the hullType to fiberglass, so we do not need to write it in the constructor as it is fixed/hard-coded in.
+        this.motor = motor;
     }
 
     // getters and setters off hullType and engine:
@@ -27,46 +27,46 @@ public class Speedboat extends Vehicle implements IWaterVehicle, IMotorised {
         this.hullType = hullType;
     }
 
-    public IMotorised getEngine() {
-        return engine;
+    public IMotorised getMotor() {
+        return motor;
     }
 
-    public void setEngine(IMotorised engine) {
-        this.engine = engine;
+    public void setMotor(IMotorised engine) {
+        this.motor = motor;
     }
 
     // implement methods:
 
     @Override
     public void startEngine() {
-        this.engine.startEngine();
+        this.motor.startEngine();
     }
 
     @Override
     public void stopEngine() {
-        this.engine.stopEngine();
+        this.motor.stopEngine();
 
     }
 
     @Override
     public int getHp() {
-        return this.engine.getHp();
+        return this.motor.getHp();
     }
 
     @Override
     public void setHp(int hp) {
-        this.engine.setHp(hp);
+        this.motor.setHp(hp);
 
     }
 
     @Override
     public int getFuel() {
-        return this.engine.getFuel();
+        return this.motor.getFuel();
     }
 
     @Override
     public void setFuel(int fuel) {
-        this.engine.setFuel(fuel);
+        this.motor.setFuel(fuel);
     }
 
 
